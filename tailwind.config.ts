@@ -7,9 +7,7 @@ const contentPath = [
 ];
 
 const config: Config = {
-  mode: "jit",
   content: contentPath,
-  purge: contentPath,
   theme: {
     extend: {
       backgroundImage: {
@@ -17,6 +15,9 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "hero-pattern": "url('/src/assets/herobg.png')",
+      },
+      screens: {
+        xs: "450px",
       },
     },
     colors: {
@@ -29,9 +30,6 @@ const config: Config = {
     },
     boxShadow: {
       card: "0px 35px 120px -15px #211e35",
-    },
-    screens: {
-      xs: "450px",
     },
   },
   plugins: [],
