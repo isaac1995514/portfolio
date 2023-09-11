@@ -7,13 +7,13 @@ import { Section } from './layout'
 const Hero = () => {
   return (
     <Section
-      className={`grid h-screen grid-cols-1 bg-hero-pattern bg-cover p-10 sm:h-[60vh] sm:grid-cols-2`}
+      className={`grid h-screen grid-cols-1 bg-hero-pattern bg-cover p-10 sm:grid-cols-2`}
     >
       <div className="flex-grow-1 h-full">
         <div className={`mx-auto flex  max-w-7xl flex-row items-start gap-5`}>
           <div className="mt-5 flex flex-col items-center justify-center">
             <div className="h-5 w-5 rounded-full bg-[#915EFF]" />
-            <div className="violet-gradient sm:h-160 h-40 w-1" />
+            <div className="violet-gradient h-40 w-1 sm:h-80" />
           </div>
           <div className="">
             <h1 className={`${styles.heroHeadText} text-white`}>
