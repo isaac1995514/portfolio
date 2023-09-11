@@ -1,4 +1,5 @@
 import { EarthCanvas, BallCanvas, AvatarCanvas, StarsCanvas } from './canvas'
+import { Section } from './layout'
 import Hero from './Hero'
 import Navbar from './Navbar'
 import About from './About'
@@ -21,4 +22,5 @@ export {
   BallCanvas,
   AvatarCanvas,
   StarsCanvas,
+  Section,
 }

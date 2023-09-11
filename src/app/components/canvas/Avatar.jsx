@@ -9,15 +9,6 @@ export function Avatar(props) {
   const { nodes, materials } = useGLTF('/3d-assets/avatar/avatar.glb')
   return (
     <group {...props} dispose={null}>
-      <hemisphereLight intensity={5} groundColor="black" />
-      <spotLight
-        position={[-6, 7, 8]}
-        angle={0.34}
-        penumbra={1}
-        intensity={1}
-        castShadow
-        shadow-mapSize={1024}
-      />
       <primitive object={nodes.Hips} />
       <skinnedMesh
         name="EyeLeft"

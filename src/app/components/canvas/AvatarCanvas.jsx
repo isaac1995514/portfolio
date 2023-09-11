@@ -32,24 +32,25 @@ const AvatarCanvas = () => {
 
   return (
     <Canvas
-      frameloop="demand"
-      shadows
-      dpr={[1, 2]}
+      // frameloop="demand"
+      // shadows
+      // dpr={[1, 2]}
       camera={{
-        position: [0, 10, 0],
-        near: 0.1,
-        fov: 22,
-        rotation: [-7, 3, 2],
+        position: [0, 3, 5],
+        fov: 20,
       }}
-      gl={{ preserveDrawingBuffer: true }}
+      // gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
+        <ambientLight intensity={3} />
         <OrbitControls
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Avatar />
+        <group position={[0, -1, 0]}>
+          <Avatar />
+        </group>
       </Suspense>
 
       <Preload all />

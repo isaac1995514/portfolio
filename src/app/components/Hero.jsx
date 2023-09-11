@@ -1,13 +1,13 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { styles } from '../styles'
 import { AvatarCanvas } from './canvas'
+import { Section } from './layout'
 
 const Hero = () => {
   return (
-    <section
-      className={`relative mx-auto h-screen w-full bg-hero-pattern ${styles.paddingX} grid grid-cols-1 p-10 sm:grid-cols-2`}
+    <Section
+      className={`grid h-screen grid-cols-1 bg-hero-pattern bg-cover p-10 sm:h-[60vh] sm:grid-cols-2`}
     >
       <div className="flex-grow-1 h-full">
         <div className={`mx-auto flex  max-w-7xl flex-row items-start gap-5`}>
@@ -46,7 +46,7 @@ const Hero = () => {
         </div>
       </a>
     </div> */}
-    </section>
+    </Section>
   )
 }
 
