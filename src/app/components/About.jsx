@@ -34,7 +34,7 @@ const About = () => {
   return (
     <Section
       id="about"
-      className={`relative mx-auto w-full min-w-[450px] ${styles.paddingX} p-10`}
+      className={`relative mx-auto w-full ${styles.paddingX} p-10`}
     >
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
