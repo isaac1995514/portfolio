@@ -3,7 +3,6 @@ import { Section } from './layout'
 import { technologies } from "../constants"
 
 const Tech = () => {
-  console.log(BallCanvas)
   return (
     <Section id='tech' className='flex flex-row flex-wrap justify-center gap-10'>
       {

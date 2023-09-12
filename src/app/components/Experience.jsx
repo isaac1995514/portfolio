@@ -11,6 +11,7 @@ import { styles } from '../styles'
 import { experiences } from '../constants'
 import { Section } from '../components/layout'
 import { textVariant } from '../utils/motion'
+import { isMobile } from '../utils/device'
 import Image from 'next/image'
 
 const ExperienceCard = ({
@@ -66,7 +67,7 @@ const Experience = () => {
         <h2 className={styles.sectionHeadText}>Work Expereince</h2>
       </motion.div>
       <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
+        <VerticalTimeline animate={!isMobile()}>
           {experiences.map((experience, i) => (
             <ExperienceCard key={experience.title} index={i} {...experience} />
           ))}

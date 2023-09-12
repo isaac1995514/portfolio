@@ -11,10 +11,10 @@ const Ball = ({imgUrl}) => {
   return (
     <group>
       <ambientLight intensity={0.25} />
-      <directionalLight position={[0, 0, 0.05]} />
-      <directionalLight position={[0, 0, -0.05]} intensity={0.3} />
+      <directionalLight position={[0, 0, 0.05]} intensity={0.5} />
+      <directionalLight position={[0, 0.05, 0]} intensity={0.3} />
       <mesh rotation={[2 * Math.PI, 0, 6.25]} castShadow receiveShadow scale={2.75}>
-        <icosahedronGeometry args={[1, 2]} />
+        <icosahedronGeometry args={[1, 10]} />
         <meshStandardMaterial
           color='#fff8eb'
           polygonOffset
@@ -40,7 +40,7 @@ const BallCanvas = ({ imgUrl }) => {
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} />
+        <OrbitControls enableZoom={false} panSpeed={0.5}  />
         <Ball imgUrl={imgUrl} />
       </Suspense>
 

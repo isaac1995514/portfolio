@@ -1,6 +1,6 @@
 import EarthCanvas from './Earth'
 import BallCanvas from './Ball'
-import AvatarCanvas from './AvatarCanvas'
 import StarsCanvas from './Stars'
+import AnimatedAvatar from './AnimatedAvatar'
 
-export { EarthCanvas, BallCanvas, AvatarCanvas, StarsCanvas }
+export { EarthCanvas, BallCanvas, StarsCanvas, AnimatedAvatar }

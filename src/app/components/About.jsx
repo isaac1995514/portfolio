@@ -8,10 +8,11 @@ import { services, overviewText } from '../constants'
 import { fadeIn, textVariant } from '../utils/motion'
 import { Section } from './layout'
 import Image from 'next/image'
+import { isMobile } from '../utils/device'
 
 const ServiceCard = ({ title, index, icon }) => {
   return (
-    <Tilt className="w-full xs:w-[250px]">
+    <Tilt className="w-full xs:w-[250px]" options={{ scale: isMobile() ? 1 : 1.3 }}>
       <motion.div
         variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
         className="green-pick-gradient w-full rounded-[20px] p-[1px] shadow-card"

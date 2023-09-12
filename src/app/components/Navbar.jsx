@@ -45,7 +45,7 @@ const Navbar = () => {
             window.scrollTo(0, 0)
           }}
         >
-          <Image src={logo} alt="logo" className="h-9 w-9 object-contain " />
+          <Image src={logo} alt="logo" width={9} height={9} className="h-9 w-9 object-contain" />
           <p className="text-white hidden cursor-pointer text-lg font-bold xs:block">
             Isaac Leong
           </p>
