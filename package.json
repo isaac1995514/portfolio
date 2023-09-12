@@ -12,6 +12,8 @@
     "@emailjs/browser": "^3.11.0",
     "@react-three/drei": "^9.83.8",
     "@react-three/fiber": "^8.14.1",
+    "@react-three/postprocessing": "^2.15.0",
+    "@readyplayerme/visage": "^4.7.1",
     "@types/node": "20.6.0",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",

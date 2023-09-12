@@ -3,6 +3,7 @@
 import { styles } from '../styles'
 import { AvatarCanvas } from './canvas'
 import { Section } from './layout'
+import { Avatar } from "@readyplayerme/visage";
 
 const Hero = () => {
   return (
@@ -27,7 +28,30 @@ const Hero = () => {
         </div>
       </div>
       <div className="row-span-4 h-full sm:row-span-1">
-        <AvatarCanvas />
+      <Avatar
+      modelSrc="https://models.readyplayer.me/64effbac42c59d7dceb568bc.glb"
+      ambientLightColor="#fff5b6"
+      ambientLightIntensity={0.25}
+      bloom={{
+        intensity: 0.1,
+        kernelSize: 1,
+        luminanceSmoothing: 1,
+        luminanceThreshold: 1,
+        materialIntensity: 3.3,
+        mipmapBlur: true
+      }}
+      cameraInitialDistance={2.5}
+      cameraTarget={1.55}
+      dirLightColor="#002aff"
+      dirLightIntensity={5}
+      environment="sunset"
+      fov={50}
+      scale={1}
+      shadows
+      spotLightAngle={0.314}
+      spotLightColor="#fff5b6"
+      spotLightIntensity={1}
+    />
       </div>
 
       {/* <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
