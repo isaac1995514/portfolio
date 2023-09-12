@@ -1,8 +1,19 @@
-import React from 'react'
+import { BallCanvas } from "./canvas"
+import { Section } from './layout'
+import { technologies } from "../constants"
 
 const Tech = () => {
+  console.log(BallCanvas)
   return (
-    <div>Tech</div>
+    <Section id='tech' className='flex flex-row flex-wrap justify-center gap-10'>
+      {
+        technologies.map(({name, imgUrl}) => (
+          <div className="w-28 h-28" key={name}>
+            <BallCanvas imgUrl={imgUrl} />
+          </div> 
+        ))
+      }
+    </Section>
   )
 }
 

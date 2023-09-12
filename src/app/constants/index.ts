@@ -1,25 +1,12 @@
 import creator from 'public/images/creator.png'
 import backend from 'public/images/backend.png'
 import web from 'public/images/web.png'
-import javascript from 'public/images/tech/javascript.png'
-import typescript from 'public/images/tech/typescript.png'
-import html from 'public/images/tech/html.png'
-import css from 'public/images/tech/css.png'
-import reactjs from 'public/images/tech/reactjs.png'
-import redux from 'public/images/tech/redux.png'
-import tailwind from 'public/images/tech/tailwind.png'
-import nodejs from 'public/images/tech/nodejs.png'
-import mongodb from 'public/images/tech/mongodb.png'
-import git from 'public/images/tech/git.png'
-import figma from 'public/images/tech/figma.png'
-import docker from 'public/images/tech/docker.png'
 import dropbox from 'public/images/company/dropbox.svg'
 import mstr from 'public/images/company/mstr.svg'
 import ups from 'public/images/company/ups.svg'
 import carrent from 'public/images/carrent.png'
 import jobit from 'public/images/jobit.png'
 import tripguide from 'public/images/tripguide.png'
-import threejs from 'public/images/tech/threejs.svg'
 import lifeIcon from 'public/images/life.png'
 
 export const navLinks = [
@@ -55,55 +42,51 @@ const services = [
 const technologies = [
   {
     name: 'HTML 5',
-    icon: html,
+    imgUrl: '/images/tech/html.png'
   },
   {
     name: 'CSS 3',
-    icon: css,
+    imgUrl: '/images/tech/css.png',
   },
   {
     name: 'JavaScript',
-    icon: javascript,
+    imgUrl: '/images/tech/javascript.png',
   },
   {
     name: 'TypeScript',
-    icon: typescript,
+    imgUrl: '/images/tech/typescript.png',
   },
   {
     name: 'React JS',
-    icon: reactjs,
+    imgUrl: '/images/tech/reactjs.png',
   },
   {
     name: 'Redux Toolkit',
-    icon: redux,
+    imgUrl: '/images/tech/redux.png',
   },
   {
     name: 'Tailwind CSS',
-    icon: tailwind,
+    imgUrl: '/images/tech/tailwind.png',
   },
   {
     name: 'Node JS',
-    icon: nodejs,
-  },
-  {
-    name: 'MongoDB',
-    icon: mongodb,
+    imgUrl: '/images/tech/nodejs.png',
   },
   {
     name: 'Three JS',
-    icon: threejs,
+    imgUrl: '/images/tech/threejs.svg',
   },
   {
     name: 'git',
-    icon: git,
+    imgUrl: '/images/tech/git.png',
   },
   {
     name: 'figma',
-    icon: figma,
+    imgUrl: '/images/tech/figma.png',
   },
   {
     name: 'docker',
-    icon: docker,
+    imgUrl: '/images/tech/docker.png',
   },
 ]
 
