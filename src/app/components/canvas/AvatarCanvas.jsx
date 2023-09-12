@@ -32,14 +32,10 @@ const AvatarCanvas = () => {
 
   return (
     <Canvas
-      // frameloop="demand"
-      // shadows
-      // dpr={[1, 2]}
       camera={{
         position: [0, 3, 5],
         fov: 20,
       }}
-      // gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <ambientLight intensity={3} />

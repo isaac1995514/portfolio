@@ -1,7 +1,6 @@
 'use client'
 
 import { styles } from '../styles'
-import { AvatarCanvas } from './canvas'
 import { Section } from './layout'
 import { Avatar } from "@readyplayerme/visage";
 
@@ -9,7 +8,7 @@ const Hero = () => {
   return (
     <Section
       id="hero"
-      className="grid h-screen grid-cols-1 grid-rows-6 bg-hero-pattern bg-cover bg-center bg-no-repeat p-10 sm:grid-cols-2 sm:grid-rows-1"
+      className="grid h-screen grid-cols-1 grid-rows-6 bg-hero-pattern bg-cover bg-center bg-no-repeat sm:grid-cols-2 sm:grid-rows-1"
     >
       <div className="row-span-2 h-full sm:row-span-1">
         <div className={`mx-auto flex max-w-7xl flex-row items-start gap-5`}>
@@ -29,28 +28,30 @@ const Hero = () => {
       </div>
       <div className="row-span-4 h-full sm:row-span-1">
       <Avatar
-      modelSrc="https://models.readyplayer.me/64effbac42c59d7dceb568bc.glb"
-      ambientLightColor="#fff5b6"
-      ambientLightIntensity={0.25}
-      bloom={{
-        intensity: 0.1,
-        kernelSize: 1,
-        luminanceSmoothing: 1,
-        luminanceThreshold: 1,
-        materialIntensity: 3.3,
-        mipmapBlur: true
-      }}
-      cameraInitialDistance={2.5}
-      cameraTarget={1.55}
-      dirLightColor="#002aff"
-      dirLightIntensity={5}
-      environment="sunset"
-      fov={50}
-      scale={1}
-      shadows
-      spotLightAngle={0.314}
-      spotLightColor="#fff5b6"
-      spotLightIntensity={1}
+        className='cursor-pointer'
+        modelSrc="/3d-assets/avatar/blue-outfit-avatar.glb"
+        animationSrc='/3d-assets/avatar/gangnam-style.fbx'
+        ambientLightColor="#fff5b6"
+        ambientLightIntensity={0.25}
+        bloom={{
+          intensity: 0.1,
+          kernelSize: 1,
+          luminanceSmoothing: 1,
+          luminanceThreshold: 1,
+          materialIntensity: 3.3,
+          mipmapBlur: true
+        }}
+        cameraInitialDistance={3}
+        cameraTarget={1.55}
+        dirLightColor="#002aff"
+        dirLightIntensity={5}
+        environment="sunset"
+        fov={60}
+        scale={1}
+        shadows
+        spotLightAngle={0.314}
+        spotLightColor="#fff5b6"
+        spotLightIntensity={1}
     />
       </div>
 
