@@ -134,7 +134,7 @@ const experiences = [
     company_name: 'MicroStrategy',
     icon: mstr,
     iconBg: '#E6DEDD',
-    date: 'Feb 10`9 - May 2022',
+    date: 'Feb 2019 - May 2022',
     points: [
       'Orchestrated and implemented the user interface redesign in MicroStrategy Workstation to deliver a user-friendly experience in managing assets like users and subscriptions for BI reporting.',
       'Oversaw the development and maintenance of an internal React component library of 30+ UI components which supports feature development in 5+ teams across the company. (Typescript.',
