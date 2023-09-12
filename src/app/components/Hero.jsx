@@ -7,10 +7,11 @@ import { Section } from './layout'
 const Hero = () => {
   return (
     <Section
-      className={`grid h-screen grid-cols-1 bg-hero-pattern bg-cover p-10 sm:grid-cols-2`}
+      id="hero"
+      className="grid h-screen grid-cols-1 grid-rows-6 bg-hero-pattern bg-cover bg-center bg-no-repeat p-10 sm:grid-cols-2 sm:grid-rows-1"
     >
-      <div className="flex-grow-1 h-full">
-        <div className={`mx-auto flex  max-w-7xl flex-row items-start gap-5`}>
+      <div className="row-span-2 h-full sm:row-span-1">
+        <div className={`mx-auto flex max-w-7xl flex-row items-start gap-5`}>
           <div className="mt-5 flex flex-col items-center justify-center">
             <div className="h-5 w-5 rounded-full bg-[#915EFF]" />
             <div className="violet-gradient h-40 w-1 sm:h-80" />
@@ -25,7 +26,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="flex-grow-1 h-full">
+      <div className="row-span-4 h-full sm:row-span-1">
         <AvatarCanvas />
       </div>
 

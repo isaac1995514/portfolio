@@ -1,13 +1,35 @@
 'use client'
 import { useState } from 'react'
+import { createPortal } from 'react-dom'
 import { styles } from '../styles'
 import { navLinks } from '../constants'
 import Image from 'next/image'
 import Link from 'next/link'
 import { logo, menu, close } from 'public/images'
+import { motion } from 'framer-motion'
+import { fadeIn } from '../utils/motion'
+
+const NavSidebar = () => {
+  return (
+    <motion.aside
+      variants={fadeIn('right')}
+      className="fixed inset-0 z-10 flex h-screen w-2/5 bg-black-100/90"
+    >
+      <ul className="flex w-full list-none flex-col">
+        {navLinks.map(({ id, title }) => (
+          <li
+            key={id}
+            className={`text-md justify-left flex h-12 w-full cursor-pointer px-4 py-2 font-medium hover:bg-white-100/10`}
+          >
+            <Link href={`#${id}`}>{title}</Link>
+          </li>
+        ))}
+      </ul>
+    </motion.aside>
+  )
+}
 
 const Navbar = () => {
-  const [active, setActive] = useState('')
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
@@ -32,9 +54,7 @@ const Navbar = () => {
           {navLinks.map(({ id, title }) => (
             <li
               key={id}
-              className={`${
-                active === id ? 'text-white' : 'text-secondary'
-              } hover:text-white text-md cursor-pointer font-medium`}
+              className={`hover:text-white text-md cursor-pointer font-medium text-secondary`}
             >
               <Link href={`#${id}`}>{title}</Link>
             </li>
@@ -55,6 +75,7 @@ const Navbar = () => {
           </button>
         </div>
       </div>
+      {isMobileMenuOpen && createPortal(<NavSidebar />, document.body)}
     </nav>
   )
 }
