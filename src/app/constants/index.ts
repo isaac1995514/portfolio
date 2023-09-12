@@ -80,14 +80,6 @@ const technologies = [
     name: 'git',
     imgUrl: '/images/tech/git.png',
   },
-  {
-    name: 'figma',
-    imgUrl: '/images/tech/figma.png',
-  },
-  {
-    name: 'docker',
-    imgUrl: '/images/tech/docker.png',
-  },
 ]
 
 const experiences = [
