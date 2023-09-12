@@ -1,6 +1,5 @@
-import mobile from 'public/images/mobile.png'
-import backend from 'public/images/backend.png'
 import creator from 'public/images/creator.png'
+import backend from 'public/images/backend.png'
 import web from 'public/images/web.png'
 import javascript from 'public/images/tech/javascript.png'
 import typescript from 'public/images/tech/typescript.png'
@@ -14,14 +13,14 @@ import mongodb from 'public/images/tech/mongodb.png'
 import git from 'public/images/tech/git.png'
 import figma from 'public/images/tech/figma.png'
 import docker from 'public/images/tech/docker.png'
-import meta from 'public/images/company/meta.png'
-import starbucks from 'public/images/company/starbucks.png'
-import tesla from 'public/images/company/tesla.png'
-import shopify from 'public/images/company/shopify.png'
+import dropbox from 'public/images/company/dropbox.svg'
+import mstr from 'public/images/company/mstr.svg'
+import ups from 'public/images/company/ups.svg'
 import carrent from 'public/images/carrent.png'
 import jobit from 'public/images/jobit.png'
 import tripguide from 'public/images/tripguide.png'
 import threejs from 'public/images/tech/threejs.svg'
+import lifeIcon from 'public/images/life.png'
 
 export const navLinks = [
   {
@@ -110,55 +109,51 @@ const technologies = [
 
 const experiences = [
   {
-    title: 'React.js Developer',
-    company_name: 'Starbucks',
-    icon: starbucks,
-    iconBg: '#383E56',
-    date: 'March 2020 - April 2021',
-    points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
-    ],
-  },
-  {
-    title: 'React Native Developer',
-    company_name: 'Tesla',
-    icon: tesla,
+    title: 'Looking for my next challenge',
+    company_name: 'The Journey of Life',
+    icon: lifeIcon,
     iconBg: '#E6DEDD',
-    date: 'Jan 2021 - Feb 2022',
-    points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
-    ],
+    date: 'May 2023 - Present',
+    points: [],
   },
   {
-    title: 'Web Developer',
-    company_name: 'Shopify',
-    icon: shopify,
-    iconBg: '#383E56',
-    date: 'Jan 2022 - Jan 2023',
-    points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
-    ],
-  },
-  {
-    title: 'Full stack Developer',
-    company_name: 'Meta',
-    icon: meta,
+    title: 'Frontend Product Engineer',
+    company_name: 'Dropbox',
+    icon: dropbox,
     iconBg: '#E6DEDD',
-    date: 'Jan 2023 - Present',
+    date: 'June 2022 - May 2023',
     points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.',
+      'Optimized and enhanced user experience in multimedia file navigation by leading the redesign and implementation of audio/video file previews and editing in Dropbox web and mobile.',
+      'Developed high-quality user interfaces for video editing and transcription, empowering users to make swift edits seamlessly and improving the overall usability of Dropbox Preview.',
+      'Optimized web performance (TTVC and Core Web Vitals) in Preview by collaborating with cross-functional teams to strategically restructure critical resources while optimizing content rendering.',
+      'Conducted engineering review meetings to evaluate, document, and outline engineering needs and actionable tasks for each sprint',
+    ],
+  },
+  {
+    title: 'Senior Software Engineer',
+    company_name: 'MicroStrategy',
+    icon: mstr,
+    iconBg: '#E6DEDD',
+    date: 'Feb 10`9 - May 2022',
+    points: [
+      'Orchestrated and implemented the user interface redesign in MicroStrategy Workstation to deliver a user-friendly experience in managing assets like users and subscriptions for BI reporting.',
+      'Oversaw the development and maintenance of an internal React component library of 30+ UI components which supports feature development in 5+ teams across the company. (Typescript.',
+      'Minimized regression issues in 8+ features by developing shared unit test and E2E automation infrastructures to verify common user workflows, ensuring a consistent customer experience.',
+      'Enabled parallel data fetching and pagination in the UI workflow by designing and implementing REST API endpoints to retrieve project states from underlying SOAP based web services.',
+      'Designed and optimized data retrieval workflows fetching 18000+ objects from backend service and reduced overall querying time by 45% on average.',
+    ],
+  },
+  {
+    title: 'Software Engineer Co-op',
+    company_name: 'UPS',
+    icon: ups,
+    iconBg: '#E6DEDD',
+    date: 'Feb 2018 - Nov 2018',
+    points: [
+      'Developed a cross-platform desktop application prototype to demonstrate the potential business use case of creating offline shipping labels at locations without internet connections.',
+      'Implemented entity data models and MVC model bindings for the HTTP responses of UPS’s shipping history page for U.S. customers.',
+      'Facilitated collection of the output of the Protractor automation script by developing a WPF application for the QA teams to enable output collection and visualization of the difference in execution results.',
+      'Eliminated defects and bugs in software products by implementing automation test cases to validate the E2E workflow of shipment management.',
     ],
   },
 ]
