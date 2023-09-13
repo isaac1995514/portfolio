@@ -7,6 +7,7 @@ import { styles } from '../../../styles'
 import { Section } from '../../layout'
 import { projects } from '../../../constants'
 import { fadeIn, textVariant } from '../../../utils/motion'
+import ComingSoonLoader from '../../ComingSoonLoader'
 
 const ProjectCard = ({
   index,
@@ -69,6 +70,16 @@ const ProjectCard = ({
   )
 }
 
+const ProjectList = () => {
+  return (
+    <div className="mt-20 flex flex-wrap gap-7">
+      {projects.map((project, index) => (
+        <ProjectCard key={`project-${index}`} index={index} {...project} />
+      ))}
+    </div>
+  )
+}
+
 const Works = () => {
   return (
     <Section id="works">
@@ -89,12 +100,7 @@ const Works = () => {
           and manage projects effectively.
         </motion.p>
       </div>
-
-      <div className="mt-20 flex flex-wrap gap-7">
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
-      </div>
+      <ComingSoonLoader />
     </Section>
   )
 }

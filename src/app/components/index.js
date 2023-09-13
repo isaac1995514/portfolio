@@ -8,6 +8,7 @@ import Experience from './sections/experience/Experience'
 import Works from './sections/projects/Works'
 import Feedbacks from './sections/feedback/Feedbacks'
 import Contact from './sections/contact/Contact'
+import CommingSoon from './ComingSoonLoader'
 
 export {
   Hero,
@@ -22,4 +23,5 @@ export {
   BallCanvas,
   StarsCanvas,
   Section,
+  CommingSoon,
 }
