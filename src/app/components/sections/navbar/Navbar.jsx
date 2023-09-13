@@ -1,13 +1,13 @@
 'use client'
 import { useState } from 'react'
 import { createPortal } from 'react-dom'
-import { styles } from '../styles'
-import { navLinks } from '../constants'
+import { styles } from '../../../styles'
+import { navLinks } from '../../../constants'
 import Image from 'next/image'
 import Link from 'next/link'
 import { logo, menu, close } from 'public/images'
 import { motion } from 'framer-motion'
-import { fadeIn } from '../utils/motion'
+import { fadeIn } from '../../../utils/motion'
 
 const NavSidebar = () => {
   return (
@@ -45,8 +45,14 @@ const Navbar = () => {
             window.scrollTo(0, 0)
           }}
         >
-          <Image src={logo} alt="logo" width={9} height={9} className="h-9 w-9 object-contain" />
-          <p className="text-white hidden cursor-pointer text-lg font-bold xs:block">
+          <Image
+            src={logo}
+            alt="logo"
+            width={9}
+            height={9}
+            className="h-9 w-9 object-contain"
+          />
+          <p className="hidden cursor-pointer text-lg font-bold text-white xs:block">
             Isaac Leong
           </p>
         </Link>
@@ -54,7 +60,7 @@ const Navbar = () => {
           {navLinks.map(({ id, title }) => (
             <li
               key={id}
-              className={`hover:text-white text-md cursor-pointer font-medium text-secondary`}
+              className={`text-md cursor-pointer font-medium text-secondary hover:text-white`}
             >
               <Link href={`#${id}`}>{title}</Link>
             </li>

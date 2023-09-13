@@ -18,8 +18,8 @@ export default function Home() {
       <About />
       <Experience />
       <Tech />
-      {/* <Works /> */}
-      {/* <Feedbacks /> */}
+      <Works />
+      <Feedbacks />
       <Contact />
       <StarsCanvas />
     </div>

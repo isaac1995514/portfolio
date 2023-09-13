@@ -1,13 +1,13 @@
-import { EarthCanvas, BallCanvas, AvatarCanvas, StarsCanvas } from './canvas'
+import { EarthCanvas, BallCanvas, StarsCanvas } from './canvas'
 import { Section } from './layout'
-import Hero from './Hero'
-import Navbar from './Navbar'
-import About from './About'
-import Tech from './Tech'
-import Experience from './Experience'
-import Works from './Works'
-import Feedbacks from './Feedbacks'
-import Contact from './Contact'
+import Hero from './sections/hero/Hero'
+import Navbar from './sections/navbar/Navbar'
+import About from './sections/about/About'
+import Tech from './sections/tech/Tech'
+import Experience from './sections/experience/Experience'
+import Works from './sections/projects/Works'
+import Feedbacks from './sections/feedback/Feedbacks'
+import Contact from './sections/contact/Contact'
 
 export {
   Hero,
@@ -20,7 +20,6 @@ export {
   Contact,
   EarthCanvas,
   BallCanvas,
-  AvatarCanvas,
   StarsCanvas,
   Section,
 }

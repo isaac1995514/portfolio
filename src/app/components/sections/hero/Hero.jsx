@@ -1,11 +1,11 @@
 'use client'
 
 import { lazy, Suspense } from 'react'
-import { styles } from '../styles'
-import { Section } from './layout'
-import CanvasLoader from './Loader'
+import { styles } from '../../../styles'
+import { Section } from '../../layout'
+import CanvasLoader from '../../Loader'
 
-const LazyAnimatedAvatar = lazy(() => import('./canvas/AnimatedAvatar'));
+const LazyAnimatedAvatar = lazy(() => import('./AnimatedAvatar'))
 
 const Hero = () => {
   return (
@@ -30,7 +30,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="row-span-4 h-full sm:row-span-1">
-        <Suspense fallback={null}>
+        <Suspense fallback={CanvasLoader}>
           <LazyAnimatedAvatar />
         </Suspense>
       </div>

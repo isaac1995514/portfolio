@@ -3,16 +3,21 @@
 import { Tilt } from 'react-tilt'
 import { motion } from 'framer-motion'
 
-import { styles } from '../styles'
-import { services, overviewText } from '../constants'
-import { fadeIn, textVariant } from '../utils/motion'
-import { Section } from './layout'
+import { styles } from '../../../styles'
+import { services, overviewText } from '../../../constants'
+import { fadeIn, textVariant } from '../../../utils/motion'
+import { Section } from '../../layout'
 import Image from 'next/image'
-import { isMobile } from '../utils/device'
+import { useDeviceType } from '../../../hooks'
 
 const ServiceCard = ({ title, index, icon }) => {
+  const { isMobile } = useDeviceType()
+
   return (
-    <Tilt className="w-full xs:w-[250px]" options={{ scale: isMobile() ? 1 : 1.3 }}>
+    <Tilt
+      className="w-full xs:w-[250px]"
+      options={{ scale: isMobile ? 1 : 1.3 }}
+    >
       <motion.div
         variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
         className="green-pick-gradient w-full rounded-[20px] p-[1px] shadow-card"
@@ -22,7 +27,7 @@ const ServiceCard = ({ title, index, icon }) => {
           className="flex min-h-[280px] flex-col items-center justify-evenly rounded-[20px] bg-tertiary px-12 py-5"
         >
           <Image src={icon} alt={title} className="h-16 w-16 object-contain" />
-          <h3 className="text-white text-center text-[20px] font-bold">
+          <h3 className="text-center text-[20px] font-bold text-white">
             {title}
           </h3>
         </div>

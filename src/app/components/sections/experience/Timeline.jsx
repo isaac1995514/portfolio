@@ -1,18 +1,10 @@
-'use client'
-
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from 'react-vertical-timeline-component'
-import { motion } from 'framer-motion'
-import 'react-vertical-timeline-component/style.min.css'
-
-import { styles } from '../styles'
-import { experiences } from '../constants'
-import { Section } from '../components/layout'
-import { textVariant } from '../utils/motion'
-import { isMobile } from '../utils/device'
+import { experiences } from '../../../constants'
 import Image from 'next/image'
+import { useDeviceType } from '../../../hooks'
 
 const ExperienceCard = ({
   date,
@@ -39,7 +31,7 @@ const ExperienceCard = ({
       }
     >
       <div>
-        <h3 className="text-white text-[24px] font-bold">{}</h3>
+        <h3 className="text-[24px] font-bold text-white">{}</h3>
         {title}
         <p className="text-[16px] font-semibold text-secondary">
           {company_name}
@@ -59,22 +51,16 @@ const ExperienceCard = ({
   )
 }
 
-const Experience = () => {
+const Timeline = () => {
+  const { isMobile } = useDeviceType()
+
   return (
-    <Section id="work">
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>What I have done so far</p>
-        <h2 className={styles.sectionHeadText}>Work Expereince</h2>
-      </motion.div>
-      <div className="mt-20 flex flex-col">
-        <VerticalTimeline animate={!isMobile()}>
-          {experiences.map((experience, i) => (
-            <ExperienceCard key={experience.title} index={i} {...experience} />
-          ))}
-        </VerticalTimeline>
-      </div>
-    </Section>
+    <VerticalTimeline animate={!isMobile}>
+      {experiences.map((experience, i) => (
+        <ExperienceCard key={experience.title} index={i} {...experience} />
+      ))}
+    </VerticalTimeline>
   )
 }
 
-export default Experience
+export default Timeline
