@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} fixed inset-x-0 top-5 z-20 mx-auto flex w-11/12 flex-wrap items-center rounded-3xl border-transparent bg-tertiary/80 py-5 transition-all sm:flex-nowrap sm:rounded-full sm:py-1 sm:transition-none`}
+      className={`${styles.paddingX} shadow-md fixed inset-x-0 top-5 z-20 mx-auto flex w-11/12 flex-wrap items-center rounded-3xl border-transparent bg-tertiary/80 py-5 shadow-violet-900/40 transition-all sm:flex-nowrap sm:rounded-full sm:py-1 sm:transition-none`}
     >
       <div className="max-ws-7xl mx-auto flex w-full items-center justify-between">
         <Link
@@ -56,7 +56,7 @@ const Navbar = () => {
         {navLinks.map(({ id, title }) => (
           <li
             key={id}
-            className={`sm:text-md cursor-pointer rounded-xl px-5 py-5 text-xl font-medium text-secondary hover:bg-secondary/80 hover:text-white sm:py-2`}
+            className={`text- cursor-pointer rounded-xl px-5 py-5 text-xl font-medium text-secondary hover:bg-secondary/80 hover:text-white sm:py-2 sm:text-base`}
             onClick={() => setIsMobileMenuOpen(false)}
           >
             <Link href={`#${id}`} className="flex w-full">
