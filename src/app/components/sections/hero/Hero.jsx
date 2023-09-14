@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <Section
       id="hero"
-      className="grid h-screen grid-cols-1 grid-rows-6 bg-hero-pattern bg-cover bg-center bg-no-repeat sm:grid-cols-2 sm:grid-rows-1"
+      className="grid h-screen grid-cols-1 grid-rows-6 bg-hero-pattern bg-cover bg-center bg-no-repeat pt-24 sm:grid-cols-2 sm:grid-rows-1 sm:pt-24"
     >
       <div className="row-span-2 h-full sm:row-span-1">
         <div className={`mx-auto flex max-w-7xl flex-row items-start gap-5`}>
