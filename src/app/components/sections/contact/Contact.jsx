@@ -7,7 +7,6 @@ import emailjs from '@emailjs/browser'
 import { styles } from '../../../styles'
 import { Section } from '../../layout'
 import { slideIn } from '../../../utils/motion'
-import { useDeviceType } from '@/app/hooks'
 
 const EarthCanvas = lazy(() => import('../../canvas/Earth'))
 
@@ -92,8 +91,6 @@ const ContactForm = () => {
 }
 
 const ContactSection = () => {
-  const { isMobile } = useDeviceType()
-
   return (
     <Section
       className={`${styles.paddingBottom} flex w-full flex-col-reverse gap-10 overflow-hidden xl:mt-12 xl:flex-row`}
@@ -111,7 +108,7 @@ const ContactSection = () => {
         className="h-[350px] md:h-[550px] xl:h-auto xl:flex-1"
       >
         <Suspense fallback={null}>
-          <EarthCanvas isMobile={isMobile} />
+          <EarthCanvas />
         </Suspense>
       </motion.dv>
     </Section>

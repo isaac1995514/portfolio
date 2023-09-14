@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useRef, Suspense } from 'react'
+import { useMemo, useRef, Suspense, memo } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Points, PointMaterial, Preload } from '@react-three/drei'
 import * as random from 'maath/random/dist/maath-random.esm'
@@ -33,18 +33,23 @@ const Stars = (props) => {
   )
 }
 
-const StarsCanvas = () => {
-  return (
-    <div className="absolute inset-0 z-[-1] h-auto w-full">
-      <Canvas camera={{ position: [0, 0, 1] }}>
-        <Suspense fallback={null}>
-          <Stars />
-        </Suspense>
+const StarsCanvas = memo(
+  () => {
+    return (
+      <div className="absolute inset-0 z-[-1] h-auto w-full">
+        <Canvas camera={{ position: [0, 0, 1] }}>
+          <Suspense fallback={null}>
+            <Stars />
+          </Suspense>
 
-        <Preload all />
-      </Canvas>
-    </div>
-  )
-}
+          <Preload all />
+        </Canvas>
+      </div>
+    )
+  },
+  () => true
+)
+
+StarsCanvas.displayName = 'StarsCanvas'
 
 export default StarsCanvas

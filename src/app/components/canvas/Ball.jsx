@@ -1,6 +1,6 @@
 'use client'
 
-import { Suspense } from 'react'
+import { Suspense, memo } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Decal, OrbitControls, Preload, useTexture } from '@react-three/drei'
 import CanvasLoader from '../Loader'
@@ -37,17 +37,22 @@ const Ball = ({ imgUrl }) => {
   )
 }
 
-const BallCanvas = ({ imgUrl }) => {
-  return (
-    <Canvas frameloop="demand" dpr={1} gl={{ preserveDrawingBuffer: true }}>
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} panSpeed={0.5} />
-        <Ball imgUrl={imgUrl} />
-      </Suspense>
+const BallCanvas = memo(
+  ({ imgUrl }) => {
+    return (
+      <Canvas frameloop="demand" dpr={1} gl={{ preserveDrawingBuffer: true }}>
+        <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls enableZoom={false} panSpeed={0.5} />
+          <Ball imgUrl={imgUrl} />
+        </Suspense>
 
-      <Preload all />
-    </Canvas>
-  )
-}
+        <Preload all />
+      </Canvas>
+    )
+  },
+  () => true
+)
+
+BallCanvas.displayName = 'BallCanvas'
 
 export default BallCanvas
