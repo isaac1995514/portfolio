@@ -12,7 +12,7 @@ export const Section = ({ children, className, id, ...rest }) => {
       initial="initial"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
-      className={`relative mx-auto box-border w-full min-w-[400px] ${styles.padding} ${className}`}
+      className={`relative mx-auto box-border w-full min-w-[400px] max-w-[100vw] ${styles.padding} ${className}`}
       {...rest}
     >
       {children}
