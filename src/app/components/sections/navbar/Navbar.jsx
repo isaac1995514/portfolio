@@ -1,45 +1,22 @@
 'use client'
 import { useState } from 'react'
-import { createPortal } from 'react-dom'
 import { styles } from '../../../styles'
 import { navLinks } from '../../../constants'
 import Image from 'next/image'
 import Link from 'next/link'
 import { logo, menu, close } from 'public/images'
-import { motion } from 'framer-motion'
-import { fadeIn } from '../../../utils/motion'
-
-const NavSidebar = () => {
-  return (
-    <motion.aside
-      variants={fadeIn('right')}
-      className="fixed inset-0 z-10 flex h-screen w-2/5 bg-black-100/90"
-    >
-      <ul className="flex w-full list-none flex-col">
-        {navLinks.map(({ id, title }) => (
-          <li
-            key={id}
-            className={`text-md justify-left flex h-12 w-full cursor-pointer px-4 py-2 font-medium hover:bg-white-100/10`}
-          >
-            <Link href={`#${id}`}>{title}</Link>
-          </li>
-        ))}
-      </ul>
-    </motion.aside>
-  )
-}
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
     <nav
-      className={`${styles.paddingX} fixed inset-x-0 top-5 z-20 mx-auto flex w-11/12 items-center rounded-full border-transparent bg-tertiary/70 py-5`}
+      className={`${styles.paddingX} fixed inset-x-0 top-5 z-20 mx-auto flex w-11/12 flex-wrap items-center rounded-3xl border-transparent bg-tertiary/80 py-5 transition-all sm:flex-nowrap sm:rounded-full sm:py-1 sm:transition-none`}
     >
       <div className="max-ws-7xl mx-auto flex w-full items-center justify-between">
         <Link
           href="/"
-          className="flex items-center gap-2"
+          className="flex flex-1 basis-3/4 items-center gap-2 sm:basis-1/2"
           onClick={() => {
             setActive('')
             window.scrollTo(0, 0)
@@ -48,25 +25,15 @@ const Navbar = () => {
           <Image
             src={logo}
             alt="logo"
-            width={9}
-            height={9}
-            className="h-9 w-9 object-contain"
+            width={16}
+            height={16}
+            className=" h-16 w-16 object-contain"
           />
-          <p className="hidden cursor-pointer text-lg font-bold text-white xs:block">
+          <p className="hidden cursor-pointer text-2xl font-bold text-white xs:block sm:text-lg">
             Isaac Leong
           </p>
         </Link>
-        <ul className="hidden list-none flex-row gap-10 sm:flex">
-          {navLinks.map(({ id, title }) => (
-            <li
-              key={id}
-              className={`text-md cursor-pointer font-medium text-secondary hover:text-white`}
-            >
-              <Link href={`#${id}`}>{title}</Link>
-            </li>
-          ))}
-        </ul>
-        <div className="flex flex-1 items-center justify-end sm:hidden">
+        <div className="flex flex-1 basis-1/4 items-center justify-end sm:hidden sm:basis-0">
           <button
             aria-label="Navigation Menu Button"
             onClick={() => {
@@ -81,7 +48,23 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-      {isMobileMenuOpen && createPortal(<NavSidebar />, document.body)}
+      <ul
+        className={`flex-1 basis-full list-none flex-col justify-center pt-8 sm:flex sm:basis-1/2 sm:flex-row sm:justify-end sm:gap-2 sm:pt-0 ${
+          isMobileMenuOpen ? 'flex' : 'hidden'
+        }`}
+      >
+        {navLinks.map(({ id, title }) => (
+          <li
+            key={id}
+            className={`sm:text-md cursor-pointer rounded-xl px-5 py-5 text-xl font-medium text-secondary hover:bg-secondary/80 hover:text-white sm:py-2`}
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            <Link href={`#${id}`} className="flex w-full">
+              {title}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </nav>
   )
 }
