@@ -26,9 +26,26 @@ const config: Config = {
         'black-100': '#100d25',
         'black-200': '#090325',
         'white-100': '#f3f3f3',
+        'neon-white': '#fffffb',
       },
       boxShadow: {
         card: '0px 35px 120px -15px #211e35',
+        'neon-white': '0px 0px 40px #fffffb',
+      },
+      keyframes: {
+        'card-pulsing': {
+          from: {
+            boxShadow: 'none',
+            color: 'rgba(#fffffb, 0.5)',
+          },
+          to: {
+            boxShadow: '0px 0px 40px #fffffb',
+            color: '#fffffb',
+          },
+        },
+      },
+      animation: {
+        'card-shadow': 'card-pulsing 1.5s linear infinite alternate',
       },
     },
   },

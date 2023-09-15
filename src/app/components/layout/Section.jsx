@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { styles } from '../../styles'
 import { staggerContainer } from '../../utils/motion'
 
-export const Section = ({ children, className, id, ...rest }) => {
+export const Section = ({ children, className = '', id, ...rest }) => {
   return (
     <motion.section
       id={id}

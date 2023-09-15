@@ -9,6 +9,7 @@ import Works from './sections/projects/Works'
 import Feedbacks from './sections/feedback/Feedbacks'
 import Contact from './sections/contact/Contact'
 import CommingSoon from './ComingSoonLoader'
+import NeonCard from './NeonCard'
 
 export {
   Hero,
@@ -24,4 +25,5 @@ export {
   StarsCanvas,
   Section,
   CommingSoon,
+  NeonCard,
 }

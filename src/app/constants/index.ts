@@ -42,7 +42,7 @@ const services = [
 const technologies = [
   {
     name: 'HTML 5',
-    imgUrl: '/images/tech/html.png'
+    imgUrl: '/images/tech/html.png',
   },
   {
     name: 'CSS 3',
